@@ -51,10 +51,10 @@ implementation
 procedure TCad_Usu.btn_calcularClick(Sender: TObject);
   var vlr1, vlr2, total : double;
 begin
-  vlr1 := strToFloat(txt_vlr_1.Text);
+  vlr1 := strToFloat(txt_vlr_1.Text);   {método converte string para floar}
   vlr2 := strToFloat(txt_vlr_2.Text);
   total := vlr1 + vlr2;
-  txt_total.Text := FloatToStr(total);
+  txt_total.Text := FloatToStr(total); {método que converte float para string}
 end;
 
 procedure TCad_Usu.btn_deletarClick(Sender: TObject);
