@@ -224,7 +224,7 @@ object Cad_Usu: TCad_Usu
   object lb_valor: TLabel
     Left = 14
     Top = 256
-    Width = 5
+    Width = 3
     Height = 13
   end
   object lb_valor2: TLabel
@@ -343,14 +343,14 @@ object Cad_Usu: TCad_Usu
     Height = 21
     TabOrder = 5
   end
-  object Edit1: TEdit
+  object txt_vlr_1: TEdit
     Left = 18
     Top = 236
     Width = 121
     Height = 21
     TabOrder = 6
   end
-  object Edit2: TEdit
+  object txt_vlr_2: TEdit
     Left = 145
     Top = 236
     Width = 121
@@ -364,8 +364,9 @@ object Cad_Usu: TCad_Usu
     Height = 25
     Caption = 'Calcular'
     TabOrder = 8
+    OnClick = btn_calcularClick
   end
-  object Edit3: TEdit
+  object txt_total: TEdit
     Left = 289
     Top = 236
     Width = 121

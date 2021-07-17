@@ -20,17 +20,18 @@ type
     lb_valor: TLabel;
     lb_valor2: TLabel;
     lb_total: TLabel;
-    Edit1: TEdit;
-    Edit2: TEdit;
+    txt_vlr_1: TEdit;
+    txt_vlr_2: TEdit;
     lb_nome: TLabel;
     lb_sobrenome: TLabel;
     lb_endereco: TLabel;
     btn_calcular: TButton;
-    Edit3: TEdit;
+    txt_total: TEdit;
     procedure btn_salvar_vendaClick(Sender: TObject);
     procedure btn_deletarClick(Sender: TObject);
     procedure btn_editarClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
+    procedure btn_calcularClick(Sender: TObject);
   private
     { Private declarations }
     var nome: string;
@@ -46,6 +47,15 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TCad_Usu.btn_calcularClick(Sender: TObject);
+  var vlr1, vlr2, total : integer;
+begin
+  vlr1 := strToInt(txt_vlr_1.Text);
+  vlr2 := strToInt(txt_vlr_2.Text);
+  total := vlr1 + vlr2;
+  txt_total.Text := IntToStr(total);
+end;
 
 procedure TCad_Usu.btn_deletarClick(Sender: TObject);
 begin
