@@ -373,4 +373,13 @@ object Cad_Usu: TCad_Usu
     Height = 21
     TabOrder = 9
   end
+  object btn_tela2: TButton
+    Left = 433
+    Top = 276
+    Width = 121
+    Height = 25
+    Caption = 'Tela 2'
+    TabOrder = 10
+    OnClick = btn_tela2Click
+  end
 end

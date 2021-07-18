@@ -27,11 +27,13 @@ type
     lb_endereco: TLabel;
     btn_calcular: TButton;
     txt_total: TEdit;
+    btn_tela2: TButton;
     procedure btn_salvar_vendaClick(Sender: TObject);
     procedure btn_deletarClick(Sender: TObject);
     procedure btn_editarClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure btn_calcularClick(Sender: TObject);
+    procedure btn_tela2Click(Sender: TObject);
   private
     { Private declarations }
     var nome: string;
@@ -47,6 +49,8 @@ var
 implementation
 
 {$R *.dfm}
+
+uses Tela2;
 
 procedure TCad_Usu.btn_calcularClick(Sender: TObject);
   var vlr1, vlr2, total, media : double;
@@ -118,6 +122,12 @@ begin
   txt_nome.Text := nome;
   txt_nome2.Text := sobrenome;
   txt_nome3.Text := endereco;
+end;
+
+procedure TCad_Usu.btn_tela2Click(Sender: TObject);
+begin
+  frm_tela2 := Tfrm_tela2.Create(self); {Define que a unit cria ela mesma}
+  frm_tela2.ShowModal; {Chama a segunda unit e só permite que trabalhemos nela}
 end;
 
 procedure TCad_Usu.SpeedButton1Click(Sender: TObject);
