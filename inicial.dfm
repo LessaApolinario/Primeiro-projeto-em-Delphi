@@ -17,9 +17,9 @@ object Cad_Usu: TCad_Usu
   object lb_cad_usuario: TLabel
     Left = 18
     Top = 18
-    Width = 285
+    Width = 323
     Height = 33
-    Caption = 'Cadastro de usu'#225'rios'
+    Caption = 'Vari'#225'veis e condicionais'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = cl3DDkShadow
     Font.Height = -27
