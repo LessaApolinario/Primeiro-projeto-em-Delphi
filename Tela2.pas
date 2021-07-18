@@ -9,6 +9,7 @@ uses
 type
   Tfrm_tela2 = class(TForm)
     lb_tela2: TLabel;
+    procedure FormClose(Sender: TObject);
   private
     { Private declarations }
   public
@@ -21,5 +22,11 @@ var
 implementation
 
 {$R *.dfm}
+
+{Limpa os campos da unit quando ela é fechada}
+procedure Tfrm_tela2.FormClose(Sender: TObject);
+begin
+  frm_tela2 := nil;
+end;
 
 end.
