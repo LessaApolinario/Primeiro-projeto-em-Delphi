@@ -37,7 +37,7 @@ type
     var nome: string;
   public
     { Public declarations }
-    var sobrenome, endereco: string;
+    var sobrenome, endereco : string;
     var valor: integer;
   end;
 
@@ -50,6 +50,7 @@ implementation
 
 procedure TCad_Usu.btn_calcularClick(Sender: TObject);
   var vlr1, vlr2, total, media : double;
+  var counter : integer;
 begin
   vlr1 := strToFloat(txt_vlr_1.Text);   {método converte string para floar}
   vlr2 := strToFloat(txt_vlr_2.Text);
@@ -57,14 +58,22 @@ begin
   txt_total.Text := FloatToStr(total); {método que converte float para string}
   // operador de condição if
   media := 60;
-  if (total >= media) then
+  {if (total >= media) and (total < 80) then}
+  if (total >= media) or (total > 50) then
   begin
-    ShowMessage('Aprovado');
+    ShowMessage('O aluno obteve ' + FloatToStr(total) + ' pontos e está aprovado');
   end
   else
   begin
-    ShowMessage('Reprovado');
+    ShowMessage('O aluno obteve ' + FloatToStr(total) + ' pontos e está reprovado');
   end;
+
+  // Laço de repetição for
+  for counter := 1 to 5 do
+  begin
+    ShowMessage(IntToStr(counter));
+  end;
+
 end;
 
 procedure TCad_Usu.btn_deletarClick(Sender: TObject);
