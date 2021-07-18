@@ -56,7 +56,8 @@ begin
   vlr2 := strToFloat(txt_vlr_2.Text);
   total := vlr1 + vlr2;
   txt_total.Text := FloatToStr(total); {método que converte float para string}
-  // operador de condição if
+
+  // estrutura de condição if
   media := 60;
   {if (total >= media) and (total < 80) then}
   if (total >= media) or (total > 50) then
@@ -69,9 +70,24 @@ begin
   end;
 
   // Laço de repetição for
-  for counter := 1 to 5 do
+  {for counter := 1 to 5 do}
+  {Usamos o downto para contagens regressivas}
+  {for counter := 5 downto 0 do
   begin
     ShowMessage(IntToStr(counter));
+    if (counter <= 0) then
+    begin
+      ShowMessage('O contador chegou a 0');
+    end;
+  end;}
+
+  // Laço de repetição while
+  counter := 1;
+  while (counter <= 4) do
+  begin
+    ShowMessage(IntToStr(counter));
+    {counter := counter + 1;}
+    inc(counter);
   end;
 
 end;
