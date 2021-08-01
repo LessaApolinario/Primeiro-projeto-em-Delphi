@@ -111,7 +111,7 @@ begin
   nome := 'Lessa';
   sobrenome := 'Apolinario';
   endereco := 'Rua A';
-  lb_valor.Caption := 'Meu nome é ' +nome + ' ' + sobrenome + ' e meu endereço é ' + endereco;
+  lb_valor.Caption := 'Meu nome é ' + nome + ' ' + sobrenome + ' e meu endereço é ' + endereco;
 end;
 
 procedure TCad_Usu.btn_salvar_vendaClick(Sender: TObject);
